@@ -1,0 +1,20 @@
+{
+  "name": "eth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "deploy.js",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
+    "ganache": "^7.8.0",
+    "solc": "^0.8.20"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "solcjs --bin --abi --include-path node_modules/ --base-path . SimpleStorage.sol",
+    "ganache": "ganache --wallet.seed myCustomSeed"
+  },
+  "author": "",
+  "license": "ISC"
+}
