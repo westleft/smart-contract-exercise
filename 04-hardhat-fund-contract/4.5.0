@@ -1,0 +1,14 @@
++ ts-node@10.9.1
++ @types/chai@4.2.0
++ @types/mocha@10.0.1
++ @typechain/hardhat@6.1.2
++ typescript@5.0.4
++ @nomicfoundation/hardhat-chai-matchers@1.0.0
++ typechain@8.1.0
++ @nomicfoundation/hardhat-network-helpers@1.0.0
++ @typechain/ethers-v5@10.1.0
+added 62 packages from 71 contributors in 20.376s
+
+188 packages are looking for funding
+  run `npm fund` for details
+
