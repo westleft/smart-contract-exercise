@@ -1,7 +1,7 @@
 const { network, ethers } = require("hardhat");
 const { developmentChain, networkConfig } = require("../helper-hardhat-config");
 
-const BASE_FEE = ethers.parseEther("0.25");
+const BASE_FEE = ethers.utils.parseEther("0.25");
 const GAS_PRICE_LINK = 1e9;
 
 module.exports = async ({ getNamedAccounts, deployments }) => {
@@ -12,17 +12,16 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
 
   if (developmentChain.includes(network.name)) {
     console.log("local network deploying ...");
+
     await deploy("VRFCoordinatorV2Mock", {
       from: deployer,
       log: true,
       args: args
     })
-  }
 
-  const raffle = await deploy("Raffle", {
-    from: deployer,
-    args: [],
-    log: true,
-    waitConfirmation: network.config.blockConfirmations || 1,
-  })
+    console.log("Mocks deployed!");
+    console.log("---------------------------")
+  }
 }
+
+module.exports.tags = ["all", "mocks"];
